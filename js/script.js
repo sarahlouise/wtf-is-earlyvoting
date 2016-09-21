@@ -8,6 +8,20 @@
             // })
             })
 
+
+            //share buttons
+            var title = 'What the F is Early Voting?';
+            var url = 'http://voteearly.us';
+            var description = "It sounds effing self-explanatory right? Early voting is voting early, before the effing election. It’s way better than waiting till election day, because you don’t have to deal with other people, but some of the specifics are a bit different state to state, so pay the fuck attention.";
+            var emailBody =  "Someone thinks you don't effing know what early voting is. It's about time you effing find out. Check out http://voteearly.us";
+            var twitterTweet = "WTF is Early Voting? You can likely vote early in your state. Look it the F up here: www.voteearly.us #WTFisEV #earlyvoting #vote";
+
+            //Twitter: Custom share function
+             $('#facebookShare').attr( 'href', "https://www.facebook.com/sharer/sharer.php?u=" + url );
+             $('#twitterShare').attr( 'href', "https://twitter.com/intent/tweet?text=" + twitterTweet + "&url="+ url + "&via=veracitymedia");
+             $('#emailShare').attr('href', 'mailto:contact@yourcompany.com?subject=' + title + '&body=' + emailBody);
+
+
             $('.selectpicker').on('change', function() {
                 //reset
                 $('#voteinfo').addClass('hide');
@@ -131,17 +145,7 @@
             //Smoothscroll
             $('a').smoothScroll();
 
-            //share
-            $('.rrssb-buttons').rrssb({
-                // required:
-                title: 'What the fuck is Early Voting?',
-                url: 'http://voteearly.us',
-                // optional:
-                description: "It sounds fucking self-explanatory right? Early voting is voting early, before the fucking election. It’s way better than waiting till election day, because you don’t have to deal with other people, but some of the specifics are a bit different state to state, so pay the fuck attention.",
-                emailBody: "Someone thinks you don't fucking know what early voting is. It's about time you fucking find out. Check out http://voteearly.us"
-            });
 
-            // Add smooth scrolling on all links inside the navbar
             
             $("#AutoScrollNav a").on('click', function(event) {
                 // Make sure this.hash has a value before overriding default behavior
